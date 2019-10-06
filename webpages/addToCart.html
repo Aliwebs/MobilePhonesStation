@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MobileWorldStation</title>
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+    <script>
+        let search = location.search.split('&');
+        let id = search[0].replace('?id=', '');
+        id = parseInt(id);
+        let name = search[1].replace('name=', '').replace(/\+/g, ' ');
+        let saveName = name.replace(/ /g, '');
+        let colour = search[2].replace('colour=', '');
+        let capacity = search[3].replace('capacity=', '');
+        capacity = parseInt(capacity);
+        let quantity = search[4].replace('quantity=', 'Quantity:');
+        let price = search[5].replace('price=', '');
+        price = parseFloat(price);
+
+        let arrayD = [id, name, colour, capacity, quantity, price];
+        console.log(arrayD);
+        arrayD = JSON.stringify(arrayD);
+        if (colour === "undefined" || capacity === "undefined") {
+            document.writeln('<h1>Colour or Capacity was not selected.</h1>');
+            setTimeout(() => {
+                window.location.replace('./basket.html');
+            }, 2000);
+        } else {
+            if (localStorage.getItem(id) != null || undefined) {
+                let data = JSON.parse(localStorage.getItem(id));
+
+            }
+            localStorage.setItem(id, arrayD);
+            setTimeout(() => {
+                window.history.back();
+            }, 200);
+        }
+    </script>
+
+    <noscript>
+        Your browser does not support JavaScript or it is disabled, this website will not work properly.
+        Please enable javascript.
+    </noscript>
+
+</body>
+
+</html>

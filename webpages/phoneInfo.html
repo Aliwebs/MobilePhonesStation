@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MobileWorldStation</title>
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body class="lightGreyBK" onload="getPhoneInfo('black'), addToBasket()">
+  <div class="navigation">
+    <nav>
+      <li><a href="./index.html">Home</a>
+        <hr>
+      </li>
+
+      <li><a href="./offers.html">Offers</a>
+        <hr>
+      </li>
+
+      <li><a href="./products.html">Products</a>
+        <hr>
+      </li>
+
+      <li><a href="./contact.html">Contact</a>
+        <hr>
+      </li>
+
+      <li><a href="./help.html">Help</a>
+        <hr>
+      </li>
+      <li class="search">
+        <form id="searchPhones">
+          <input id="searchBar" placeholder="Search..." type="text" value="">
+        </form>
+      </li>
+
+      <li class="align_right"><a href="./basket.html">Basket</a></li>
+    </nav>
+
+  </div>
+  <div id="phoneName">
+    <h1></h1>
+  </div>
+  <div id="product_container">
+    <!-- Slideshow container -->
+    <div id="slideshow-container" class="slideshow-container lightGreyBK">
+
+    </div>
+
+    <div id="item-info">
+      <h1>Options</h1>
+      <ul>
+        <p>Colour:</p>
+        <li id="colour">
+
+        </li>
+        <p>Capacity: </p>
+        <li id="capacity">
+
+        </li>
+        <li id="stock">
+          <h2 id="available-txt">In stock: </h2>
+          <h2></h2>
+          <br>
+        </li>
+        <li>
+          <h3>Delivery Options: </h3>
+          <p><b>Available (UK only)</b></p>
+          <p id="available"></p>
+        </li>
+        <li id="price">
+
+        </li>
+        <li id="quantity">
+          Quantity:
+          <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="40">40</option>
+          </select>
+        </li>
+        <form action="./addToCart.html" method="GET" id="addCart">
+
+          <label for="id"></label>
+          <input type="text" name="id" value="" hidden>
+
+          <label for="name"></label>
+          <input type="text" name="name" value="" hidden>
+
+          <label for="colour"></label>
+          <input type="text" name="colour" value="" hidden>
+
+          <label for="capacity"></label>
+          <input type="text" name="capacity" value="" hidden>
+
+          <label for="quantity"></label>
+          <input type="text" name="quantity" value="" hidden>
+
+          <label for="price"></label>
+          <input type="text" name="price" value="" hidden>
+
+
+
+          <li class="btn-cart"><button id="addCartBtn" type="submit">Add To Cart</li>
+        </form>
+      </ul>
+    </div>
+  </div>
+  <h2 style="margin: 20px;" id="linkToPhone">See Manufacturers website for more details <a href="#"
+      target="_blank">here</a>.</h2>
+  <script type="text/javascript" src="../js/phones.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+
+  <noscript>
+    Your browser does not support JavaScript or it is disabled, this website will not work properly.
+    Please enable javascript.
+  </noscript>
+</body>
+
+</html>

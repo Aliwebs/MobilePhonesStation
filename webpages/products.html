@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MobileWorldStation</title>
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body onload="insertPhonesDecision(false, false, true), initSearch('products'), products()">
+  <div class="navigation">
+    <nav>
+      <li><a href="./index.html">Home</a>
+        <hr>
+      </li>
+
+      <li><a href="./offers.html">Offers</a>
+        <hr>
+      </li>
+
+      <li><a href="./products.html">Products</a>
+        <hr>
+      </li>
+
+      <li><a href="./contact.html">Contact</a>
+        <hr>
+      </li>
+
+      <li><a href="./help.html">Help</a></li>
+      <li class="search">
+        <form id="searchPhones">
+          <input id="searchBar" placeholder="Search..." type="text" value="">
+        </form>
+      </li>
+
+      <li class="align_right">
+        <a href="./Basket.html">Basket</a>
+      </li>
+    </nav>
+
+  </div>
+
+  <h1 id="titleRight">Products</h1>
+
+  <h1 id="searchResults">Search Results: </h1>
+  <div id="productsContainer">
+    <div id="filterBox">
+      <div>
+        <h1>Filter: </h1>
+        <button id="reset">Reset</button>
+      </div>
+      <div>
+        <h1>Make: </h1>
+        <select id="selectMake">
+          <option value="any">Any</option>
+          <option value="samsung">Samsung</option>
+          <option value="oppo">OPPO</option>
+          <option value="iPhone">iPhone</option>
+          <option value="Nokia">Nokia</option>
+          <option value="Motorola">Motorola</option>
+        </select>
+      </div>
+      <div>
+        <div>
+          <h1>Cost: </h1>
+
+          <h2 style="margin-top:10px;margin-bottom:10px;" id="displayRange">£0</h2>
+        </div>
+        <input step="10" type="range" min="0" max="1000" value="0" id="priceSlider">
+      </div>
+      <div id="buttonInch">
+        <h1>Screen Size: </h1>
+        <button value="5.9">Under 6"</button>
+        <button value="6.1">Over 6"</button>
+      </div>
+
+    </div>
+    <div id="productList">
+    </div>
+  </div>
+  <script type="text/javascript" src="../js/phones.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+
+  <noscript>
+    Your browser does not support JavaScript or it is disabled, this website will not work properly.
+    Please enable javascript.
+  </noscript>
+</body>
+
+</html>

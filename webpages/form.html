@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MobileWorldStation</title>
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navigation">
+        <nav>
+            <li><a href="./index.html">Home</a>
+                <hr>
+            </li>
+
+            <li><a href="./offers.html">Offers</a>
+                <hr>
+            </li>
+
+            <li><a href="./products.html">Products</a>
+                <hr>
+            </li>
+
+            <li><a href="./contact.html">Contact</a>
+                <hr>
+            </li>
+
+            <li><a href="./help.html">Help</a></li>
+            <li class="search">
+                <form id="searchPhones">
+                    <input id="searchBar" placeholder="Search..." type="text" value="">
+                </form>
+            </li>
+
+            <li class="align_right">
+                <a href="./Basket.html">Basket</a>
+            </li>
+        </nav>
+
+    </div>
+    <h1 id="titleRight">Help Form</h1>
+    <form method="POST" action="https://json-serve-data.herokuapp.com/formData" id="form">
+        <label for="name">Name</label>
+        <input name="name" type="text">
+        <label for="email">Email</label>
+        <input name="email" type="email">
+        <label for="phoneNumber">Phone Number</label>
+        <input name="phoneNumber" type="number">
+        <label for="Enquiry">Enquiry</label>
+        <input style="height:100px; vertical-align: middle;" name="Enquiry" type="text">
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <script type="text/javascript" src="../js/phones.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+
+    <noscript>
+        Your browser does not support JavaScript or it is disabled, this website will not work properly.
+        Please enable javascript.
+    </noscript>
+</body>
+
+</html>

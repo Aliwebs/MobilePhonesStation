@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MobileWorldStation</title>
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body onload="insertPhonesDecision(false, true, false), initSearch('offers')">
+  <div class="navigation">
+    <nav>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./offers.html">Offers</a></li>
+      <li><a href="./products.html">Products</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="./help.html">Help</a></li>
+      <li>
+        <form id="searchPhones">
+          <input placeholder="Search..." type="text" value="">
+        </form>
+      </li>
+      <li><a class="align_right" href="./basket.html">Basket</a></li>
+    </nav>
+  </div>
+
+  <h1 id="titleRight" style="margin:20px;">Offers</h1>
+
+  <h1 id="searchResults">Search Results: </h1>
+  <div id="offerList">
+  </div>
+  <script type="text/javascript" src="../js/phones.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+
+  <noscript>
+    Your browser does not support JavaScript or it is disabled, this website will not work properly.
+    Please enable javascript.
+  </noscript>
+</body>
+
+</html>
