@@ -637,7 +637,7 @@ i {
 
 #filterBox {
   width: 20%;
-  height: 60vh;
+  height: 50%;
   border: 1px solid rgba(220, 220, 220, 0.7);
   margin-left: 40px;
   margin-top: 32px;
@@ -826,16 +826,17 @@ i {
     width: 100%;
     margin: 0;
   }
-    .filter{
-        width: 200px;
-    }
+
+  .filter {
+    width: 200px;
+  }
 
 
 }
 
 @media only screen and (max-width: 1200px) {
-   #phoneList li {
-  width: 100%;
- }
+  #phoneList li {
+    width: 100%;
+  }
 
 }

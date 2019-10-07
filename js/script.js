@@ -14,7 +14,7 @@ if (!localStorage.id || localStorage.id == NaN) {
 function insertPhones(array, target) {
   array.forEach((phone, index) => {
     if (target.id == "phonesList" || target.id == "productList") {
-      
+
       //creating all the elements needed to insert the phones
 
       let list = document.createElement('li');
@@ -70,7 +70,7 @@ function insertPhones(array, target) {
       ////append the name of the phone to the text node of "p" according to the "phones" array
       if (phone.price[phone.capacity[0]] != undefined) {
         para.append(document.createTextNode("£" + phone.price[phone.capacity[0]]));
-      } 
+      }
 
       let para2 = document.createElement('p');
       para2.append(document.createTextNode(phone.screen));
@@ -142,7 +142,7 @@ function insertPhones(array, target) {
       //set src of image element according to the "phones" array
       let phoneName = phone.phone.replace(/\+/g, ' ');
       let name = phoneName.replace(/ /g, '');
-      image.setAttribute("src", phone.img[0] + phone.colors[0] + '/' + name + '_' + '0' + '.png');
+      image.setAttribute("src", phone.img[0] + phone.colors[0] + '/' + name.toLowerCase() + '_' + '0' + '.png');
 
 
 
@@ -275,7 +275,7 @@ function getPhoneInfo(color) {
   Array.from(phones).forEach(phone => {
     if (phone.phone == phoneName) {
 
-    //created slides function which inserts the pictures in the slideshow
+      //created slides function which inserts the pictures in the slideshow
       function loadSlides(color) {
         //looped trough all the images in the dataset used to load the information about the phones
         Array.from(phone.img).forEach((img, index) => {
@@ -375,25 +375,25 @@ function getPhoneInfo(color) {
 
         let priceOff = phone.price[phone.capacity[0]];
 
-        if(priceOff == priceFromUrl){
+        if (priceOff == priceFromUrl) {
           let price = document.getElementById('price');
           let priceTxt = document.createElement('h2');
-          priceTxt.setAttribute('value',  priceFromUrl);
-          priceTxt.innerText = "Price: £" +  priceFromUrl;
+          priceTxt.setAttribute('value', priceFromUrl);
+          priceTxt.innerText = "Price: £" + priceFromUrl;
 
           price.append(priceTxt);
-        }else{
+        } else {
           let price = document.getElementById('price');
           let priceTxt = document.createElement('h2');
 
-          priceTxt.setAttribute('value',  priceFromUrl);
-          priceTxt.innerText = "Price: £" +  priceFromUrl;
+          priceTxt.setAttribute('value', priceFromUrl);
+          priceTxt.innerText = "Price: £" + priceFromUrl;
 
           price.append(priceTxt);
         }
-        
 
-        
+
+
 
         let linkDesc = document.getElementById('linkToPhone');
 
@@ -462,28 +462,28 @@ function addToBasket() {
 
   let color = document.getElementById('colour').children[0].value;
   let capacity = document.getElementById('capacity').children[0].value;
-  
+
   let pickedPhone = phones.filter(phone => phone["phone"] == name);
   phonePrice = pickedPhone[0].price[capacity];
 
   let price = document.getElementById('price').children[0];
-  let priceValue = phonePrice*sel.value;
+  let priceValue = phonePrice * sel.value;
 
-  price.setAttribute('value',priceValue);
+  price.setAttribute('value', priceValue);
   price.innerText = `Price  ${priceValue.toLocaleString('en-GB',{ style: 'currency', currency: 'GBP' })}`;
 
-  
 
- 
 
-  
+
+
+
 
   sel.addEventListener('change', _ => {
-     price = document.getElementById('price').children[0];
-     priceValue = phonePrice*sel.value;
-     price.setAttribute('value',priceValue);
-     price.innerText = `Price  ${priceValue.toLocaleString('en-GB',{ style: 'currency', currency: 'GBP' })}`;
-     addFormData(name, color, capacity, sel.value, priceValue);
+    price = document.getElementById('price').children[0];
+    priceValue = phonePrice * sel.value;
+    price.setAttribute('value', priceValue);
+    price.innerText = `Price  ${priceValue.toLocaleString('en-GB',{ style: 'currency', currency: 'GBP' })}`;
+    addFormData(name, color, capacity, sel.value, priceValue);
   })
 
   setTimeout(() => {
@@ -505,14 +505,14 @@ function addToBasket() {
         Array.from(e.target.parentNode.children).forEach(button => button.style.border = "none");
         e.target.style.border = "4px solid lime";
         capacity = e.target.value;
-        
-     phonePrice = pickedPhone[0].price[capacity];
 
-     price = document.getElementById('price').children[0];
-     priceValue = phonePrice*sel.value;
+        phonePrice = pickedPhone[0].price[capacity];
 
-     price.setAttribute('value',priceValue);
-     price.innerText = `Price  ${priceValue.toLocaleString('en-GB',{ style: 'currency', currency: 'GBP' })}`;
+        price = document.getElementById('price').children[0];
+        priceValue = phonePrice * sel.value;
+
+        price.setAttribute('value', priceValue);
+        price.innerText = `Price  ${priceValue.toLocaleString('en-GB',{ style: 'currency', currency: 'GBP' })}`;
 
         addFormData(name, color, capacity, sel.value, phonePrice);
       }
@@ -648,16 +648,16 @@ function basket() {
     })
 
     function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
     orderTotal.innerHTML = "Order Total: £" + numberWithCommas(totalPrice.toFixed(2));
   }
   totalPriceF();
-    
-    let orderNow = document.getElementById('Order');
-    orderNow.addEventListener('click', e => {
-        document.write('<h1 style="text-align:center;">Thanks for buying with us!</h1>')
-    })
+
+  let orderNow = document.getElementById('Order');
+  orderNow.addEventListener('click', e => {
+    document.write('<h1 style="text-align:center;">Thanks for buying with us!</h1>')
+  })
 }
 
 
@@ -737,8 +737,8 @@ function products() {
     Array.from(items.children).forEach(item => item.style.display = "block");
     let slider = document.getElementById('priceSlider');
     slider.value = "0";
-     let display = document.getElementById('displayRange');
-     display.textContent = `£0`;
+    let display = document.getElementById('displayRange');
+    display.textContent = `£0`;
   })
 
 }
