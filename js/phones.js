@@ -1,5 +1,4 @@
-const phones = [
-  {
+const phones = [{
     phone: "Samsung Galaxy S9",
     img: [
       "../assets/SamsungGalaxyS9/",
@@ -20,7 +19,9 @@ const phones = [
     ],
     battery: 22,
     link: "https://www.samsung.com/uk/smartphones/galaxy-s9/",
-    price: { "64": 739.0 }
+    price: {
+      "64": 739.0
+    }
   },
   {
     phone: "Google Pixel 3XL",
@@ -39,7 +40,10 @@ const phones = [
     fetures: ["12MP camera", "64GB or 128GB internal storage"],
     battery: 26,
     link: "https://store.google.com/product/pixel_3",
-    price: { "64": 869.0, "128": 959.0 }
+    price: {
+      "64": 869.0,
+      "128": 959.0
+    }
   },
   {
     phone: "Huawei Mate 20 Pro",
@@ -63,7 +67,9 @@ const phones = [
     ],
     battery: 29.8,
     link: "https://consumer.huawei.com/uk/phones/mate20-pro/",
-    price: { "128": 799.99 }
+    price: {
+      "128": 799.99
+    }
   },
   {
     phone: "Huawei P20 Pro",
@@ -83,11 +89,13 @@ const phones = [
     fetures: ["40MP + 20MP + 8MP triple lens camera", "128GB internal storage"],
     battery: 25,
     link: "https://consumer.huawei.com/uk/phones/m/p20/",
-    price: { "128": 599.99 }
+    price: {
+      "128": 599.99
+    }
   },
   {
     phone: "iPhone XR",
-    img: ["../assets/iphoneXR/", "../assets/iphoneXR/", "../assets/iphoneXR/"],
+    img: ["../assets/iPhoneXR/", "../assets/iPhoneXR/", "../assets/iPhoneXR/"],
     colors: ["Black", "White", "Blue", "Red", "Coral", "Yellow"],
     capacity: [64, 128, 256],
     stock: true,
@@ -96,7 +104,11 @@ const phones = [
     fetures: ["12MP camera", "64GB, 128GB or 256GB internal storage"],
     battery: 25,
     link: "https://www.apple.com/uk/iphone-xr/",
-    price: { "64": 749.99, "128": 799.0, "256": 899.0 }
+    price: {
+      "64": 749.99,
+      "128": 799.0,
+      "256": 899.0
+    }
   },
   {
     phone: "OPPO RX17 Neo",
@@ -115,7 +127,9 @@ const phones = [
     fetures: ["16MP + 2MP dual camera", "128GB internal storage"],
     battery: 30,
     link: "https://www.oppo.com/uk/smartphone-rx17-neo/",
-    price: { "128": 319.0 }
+    price: {
+      "128": 319.0
+    }
   },
   {
     phone: "Samsung Note 9",
@@ -138,7 +152,9 @@ const phones = [
     ],
     battery: 29,
     link: "https://www.samsung.com/my/smartphones/galaxy-note9/specs/",
-    price: { "128": 799.99 }
+    price: {
+      "128": 799.99
+    }
   },
   {
     phone: "Nokia 7.1",
@@ -161,7 +177,9 @@ const phones = [
     ],
     battery: 19.5,
     link: "https://www.nokia.com/phones/en_gb/nokia-7",
-    price: { "32": 199.99 }
+    price: {
+      "32": 199.99
+    }
   },
   {
     phone: "iPhone XS",
@@ -174,7 +192,11 @@ const phones = [
     fetures: ["12MP dual lens camera"],
     battery: 20,
     link: "https://www.apple.com/uk/iphone-xs/",
-    price: { "64": 999.0, "256": 999.0, "512": 1149.0 }
+    price: {
+      "64": 999.0,
+      "256": 999.0,
+      "512": 1149.0
+    }
   },
   {
     phone: "iPhone 8",
@@ -187,7 +209,10 @@ const phones = [
     fetures: ["7MP front-facing lens"],
     battery: 14,
     link: "https://www.apple.com/uk/shop/buy-iphone/iphone-8",
-    price: { "64": 599.0, "256": 1149.0 }
+    price: {
+      "64": 599.0,
+      "256": 1149.0
+    }
   },
   {
     phone: "Motorola G7 Plus",
@@ -203,7 +228,9 @@ const phones = [
     capacity: [64],
     stock: true,
     link: "https://www.motorola.co.uk/products/moto-g-plus-gen-7",
-    price: { "64": 269.99 }
+    price: {
+      "64": 269.99
+    }
   },
   {
     phone: "Motorola G7 Power",
@@ -219,6 +246,8 @@ const phones = [
     capacity: [64],
     stock: true,
     link: "https://www.motorola.com/us/products/moto-g-power-gen-7",
-    price: { "64": 179.99 }
+    price: {
+      "64": 179.99
+    }
   }
 ];
