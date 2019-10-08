@@ -140,9 +140,9 @@ function insertPhones(array, target) {
       //create img element
       let image = document.createElement('img');
       //set src of image element according to the "phones" array
-      let phoneName = phone.phone.replace(/\+/g, ' ');
+      let phoneName = phone.phone;
       let name = phoneName.replace(/ /g, '');
-      image.setAttribute("src", phone.img[0] + phone.colors[0] + '/' + name + '_' + '0' + '.png');
+      image.setAttribute("src", phone.img[0] + phone.colors[0] + '/' + name.toLowerCase() + '_' + '0' + '.png');
 
 
 
@@ -300,7 +300,7 @@ function getPhoneInfo(color) {
           let image = document.createElement('img');
           let name = phoneName.replace(/ /g, '');
 
-          image.src = `${img}${color}/${name}_${index}.png`;
+          image.src = `${img}${color}/${name.toLowerCase()}_${index}.png`;
 
           //created the back button and assigned the required attributes
           let btn_left = document.createElement('i');
@@ -564,7 +564,7 @@ function basket() {
       deleteItem.setAttribute('type', 'button');
       deleteItem.setAttribute('value', phoneNameLoc[0]);
       deleteItem.textContent = "Delete";
-      let imgPath = `assets/${phoneNameLoc[1].replace(/ /g,'')}/${phoneNameLoc[2]}/${phoneNameLoc[1].replace(/ /g,'')}_0.png`;
+      let imgPath = `assets/${phoneNameLoc[1].replace(/ /g,'')}/${phoneNameLoc[2]}/${phoneNameLoc[1].replace(/ /g,'').toLowerCase()}_0.png`;
       image.setAttribute('src', imgPath);
       image.src = image.src.replace('webpages', '');
       let quantity = document.createElement('p');
