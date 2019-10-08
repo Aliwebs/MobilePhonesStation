@@ -299,7 +299,7 @@ function getPhoneInfo(color) {
           div2.innerText = index + 1 + " / " + arrLength;
           let image = document.createElement('img');
           let name = phoneName.replace(/ /g, '');
-
+          
           image.src = `${img}${color}/${name.toLowerCase()}_${index}.png`;
 
           //created the back button and assigned the required attributes
