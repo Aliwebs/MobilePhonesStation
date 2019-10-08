@@ -101,11 +101,11 @@ const phones = [
   {
     phone: "OPPO RX17 Neo",
     img: [
-      "../assets/opporx17neo/",
-      "../assets/opporx17neo/",
-      "../assets/opporx17neo/",
-      "../assets/opporx17neo/",
-      "../assets/opporx17neo/"
+      "../assets/Opporx17neo/",
+      "../assets/Opporx17neo/",
+      "../assets/Opporx17neo/",
+      "../assets/Opporx17neo/",
+      "../assets/Opporx17neo/"
     ],
     colors: ["Blue", "Red"],
     capacity: [128],
