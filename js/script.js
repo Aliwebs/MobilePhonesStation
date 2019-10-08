@@ -60,7 +60,7 @@ function insertPhones(array, target) {
       //create img element
       let image = document.createElement('img');
       //set src of image element according to the "phones" array
-      let phoneName = phone.phone.replace(/\+/g, ' ');
+      let phoneName = phone.phone;
       let name = phoneName.replace(/ /g, '');
       image.setAttribute("src", phone.img[0] + phone.colors[0] + '/' + name.toLowerCase() + '_' + '0' + '.png');
 
